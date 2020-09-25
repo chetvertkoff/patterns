@@ -1,6 +1,13 @@
-export default interface IPizzaIngredientFactory {
+import Cheese from "./Cheese";
+import Clams from "./Clams";
+import Dough from "./Dough";
+import Pepperoni from "./Pepperoni";
+import Sauce from "./Sauce";
+import Veggies from "./Veggies";
+
+export default interface IPizzaIngredientFactory  {
   createDough(): Dough;
-	createSauce(): Sause;
+	createSauce(): Sauce;
 	createCheese(): Cheese;
 	createPepperoni(): Pepperoni;
 	createClam(): Clams;
