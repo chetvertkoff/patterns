@@ -22,8 +22,13 @@ export default class NYPizzaStore extends PizzaStore{
       case "clam":
         pizza = new PepperoniPizza(ingredientFactory);
         pizza.name = item;
+      default:
+        pizza = new CheesePizza(ingredientFactory);
+        pizza.name = item;
       break;
     }
+    console.log('debudg', pizza);
+    
     return pizza;
   }
 }

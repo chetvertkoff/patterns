@@ -3,7 +3,7 @@ import MarinaraSauce from "./MarinaraSauce";
 import ReggianoCheese from "./ReggianoCheese";
 import ThinCrustDough from "./ThinCrustDough";
 
-export default class NYPizzaIngredientFactory implements IPizzaIngredientFactory{
+export default class NYPizzaIngredientFactory implements IPizzaIngredientFactory {
   public createDough() {
     return new ThinCrustDough();
   }
