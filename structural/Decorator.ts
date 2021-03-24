@@ -1,4 +1,9 @@
-
+/**
+ * Декоратор — это структурный паттерн проектирования, который позволяет
+ * динамически добавлять объектам новую функциональность, оборачивая их в полезные «обёртки»
+ *
+ * - Когда надо динамически добавлять к объекту новые функциональные возможности. При этом данные возможности могут быть сняты с объекта
+ * */
 namespace Decorator {
 
   class Decorator {
@@ -16,7 +21,7 @@ namespace Decorator {
     }
   }
 
-  class AutoPilotDecorator extends Decorator{
+  class AutoPilotDecorator extends Decorator {
     getPrice() {
       return super.getPrice() + 300
     }
@@ -67,7 +72,8 @@ namespace Decorator {
     }
   }
 
+  const tesla = new Tesla()
 
-  const teslaParkDescr = new ParktronicDecorator(new AutoPilotDecorator(new Tesla())).getDescr()
-  
+  const teslaWithPark = new ParktronicDecorator(tesla)
+  console.log(new AutoPilotDecorator(teslaWithPark).getDescr())
 }

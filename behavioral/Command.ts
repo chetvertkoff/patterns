@@ -49,10 +49,11 @@ namespace Command {
         }
     }
 
-    const engine = new Engine() // off now
+    const engine = new Engine()
+    const onEngine = new OnEngine(engine)
+    const offEngine = new OffEngine(engine)
 
-    new OnEngine(engine).execute() // toggle through command class
+    const driver = new Driver(onEngine).execute()
 
-    console.log(engine) // engine on
-
+    console.log(engine)
 }
